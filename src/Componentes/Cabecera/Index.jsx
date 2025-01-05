@@ -10,11 +10,11 @@ const HeaderEstilizado = styled.header`
   }
 `;
 
-const Cabecera = ({ setFotosFiltradas }) => {
+const Cabecera = ({ filtrarFotos }) => {
   return (
     <HeaderEstilizado>
       <img src="imagenes/logo.png" alt="Logo de Space-App" />
-      <CampoTexto setFotosFiltradas={setFotosFiltradas} />
+      <CampoTexto filtrarFotos={filtrarFotos} />
     </HeaderEstilizado>
   );
 };

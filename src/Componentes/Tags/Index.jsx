@@ -33,6 +33,9 @@ const Tags = ({ filtrarPorTag }) => {
   return (
     <TagsEstilizadas>
       <TagTitulo>Buscar por Tags:</TagTitulo>
+      <BotonTag onClick={() => filtrarPorTag(null)}>
+        Todos
+      </BotonTag>
       {tags.map((tag) => (
         <BotonTag key={tag.id} onClick={() => filtrarPorTag(tag.id)}>
           {tag.titulo}
@@ -41,6 +44,5 @@ const Tags = ({ filtrarPorTag }) => {
     </TagsEstilizadas>
   );
 };
-
 
 export default Tags;

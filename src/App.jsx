@@ -6,7 +6,6 @@ import Banner from "./Componentes/Banner/Index";
 import Galeria from "./Componentes/Galeria/Index";
 import fotos from "./fotos.json";
 import { useState } from "react";
-import Footer from "./Componentes/Footer/Index";
 
 const FondoGradiente = styled.div`
   background: linear-gradient(175deg, #041833 4.16%, #04244F, 48%, #154580 96.76%);
@@ -33,12 +32,18 @@ const ContenidoGaleria = styled.section`
 
 const App = () => {
   const [fotosDeGaleria, setFotosDeGaleria] = useState(fotos);
-  const [filtroTexto, setFiltroTexto] = useState("");
 
   const filtrarFotos = (texto) => {
-    const textoMinuscula = texto.toLowerCase();
+    const textoNormalizado = texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
     const fotosFiltradas = fotos.filter((foto) =>
-      foto.title.toLowerCase().includes(textoMinuscula)
+      foto.title
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .includes(textoNormalizado)
     );
     setFotosDeGaleria(fotosFiltradas);
     if (fotosFiltradas.length === 0) {
@@ -47,7 +52,7 @@ const App = () => {
   };
 
   const filtrarPorTag = (tagId) => {
-    if (!tagId) {
+    if (tagId === null) { 
       setFotosDeGaleria(fotos);
     } else {
       const fotosFiltradas = fotos.filter((foto) => foto.tagId === tagId);
@@ -70,7 +75,7 @@ const App = () => {
     <FondoGradiente>
       <GlobalStyles />
       <AppContainer>
-        <Cabecera setFotosFiltradas={filtrarFotos} />
+        <Cabecera filtrarFotos={filtrarFotos} />
         <MainContainer>
           <BarraLateral />
           <ContenidoGaleria>
@@ -84,7 +89,6 @@ const App = () => {
           </ContenidoGaleria>
         </MainContainer>
       </AppContainer>
-      <Footer/>
     </FondoGradiente>
   );
 };
