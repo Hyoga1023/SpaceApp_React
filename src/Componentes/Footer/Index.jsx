@@ -38,12 +38,12 @@ const Footer = () => {
     return (
         <FooterEstilizado>
             <LogosRedes>
-                <img src="https://github.com/Hyoga1023/SpaceApp_React/blob/main/public/Otros/facebook.png" alt="Logo Facebook" />
-                <img src="/otros/twitter.png" alt="Logo Twitter" />
-                <img src="/otros/instagram.png" alt="Logo Instagram" />
+                <img src="\public\Otros\facebook.png" alt="Logo Facebook" />
+                <img src="\public\Otros\twitter.png" alt="Logo Twitter" />
+                <img src="\public\Otros\instagram.png" alt="Logo Instagram" />
             </LogosRedes>
             <LogoDesarrollador>
-                <img src="/otros/logo_letra_blanca_sin_fondo.png" alt="Logo Desarrollador" />
+                <img src="\public\Otros\logo_letra_blanca_sin_fondo.png" alt="Logo Desarrollador" />
             </LogoDesarrollador>
             <Texto>© 2025 Todos los derechos reservados.</Texto>
         </FooterEstilizado>
