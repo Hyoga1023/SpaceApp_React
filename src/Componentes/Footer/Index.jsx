@@ -10,39 +10,40 @@ const FooterEstilizado = styled.footer`
     margin-top: 20px;
     align-items: center;
 `;
+
 const LogosRedes = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 35px 20px;
     align-items: center;
-    gap:30px;
+    gap: 30px;
     width: auto;
     height: 30%;
-`
+`;
 
 const LogoDesarrollador = styled.div`
     display: flex;
     width: auto;
     height: 90px;
     margin-top: 5px;
-`
+`;
 
 const Texto = styled.p`
-    display: flex;          
+    display: flex;
     align-items: center;
     padding: 0 20px;
-`
+`;
 
 const Footer = () => {
     return (
         <FooterEstilizado>
             <LogosRedes>
-                <img src="/facebook.png" alt="Logo Facebook" />
-                <img src="/twitter.png" alt="Logo Twitter" />
-                <img src="/instagram.png" alt="Logo Instagram" />
+                <img src="/otros/facebook.png" alt="Logo Facebook" />
+                <img src="/otros/twitter.png" alt="Logo Twitter" />
+                <img src="/otros/instagram.png" alt="Logo Instagram" />
             </LogosRedes>
             <LogoDesarrollador>
-                <img src="/logo_letra_blanca_sin_fondo.png" alt=""/>
+                <img src="/otros/logo_letra_blanca_sin_fondo.png" alt="Logo Desarrollador" />
             </LogoDesarrollador>
             <Texto>© 2025 Todos los derechos reservados.</Texto>
         </FooterEstilizado>
@@ -50,3 +51,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
