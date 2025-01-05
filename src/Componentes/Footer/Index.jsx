@@ -37,12 +37,12 @@ const Footer = () => {
     return (
         <FooterEstilizado>
             <LogosRedes>
-                <img src="/public/Otros/facebook.png" alt="Logo Facebook" />
-                <img src="public/Otros/twitter.png" alt="Logo Twitter" />
-                <img src="public/Otros/instagram.png" alt="Logo Instagram" />
+                <img src="/facebook.png" alt="Logo Facebook" />
+                <img src="/twitter.png" alt="Logo Twitter" />
+                <img src="/instagram.png" alt="Logo Instagram" />
             </LogosRedes>
             <LogoDesarrollador>
-                <img src="public/Otros/logo_letra_blanca_sin_fondo.png" alt=""/>
+                <img src="/logo_letra_blanca_sin_fondo.png" alt=""/>
             </LogoDesarrollador>
             <Texto>© 2025 Todos los derechos reservados.</Texto>
         </FooterEstilizado>
