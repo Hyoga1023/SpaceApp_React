@@ -6,6 +6,7 @@ import Banner from "./Componentes/Banner/Index";
 import Galeria from "./Componentes/Galeria/Index";
 import fotos from "./fotos.json";
 import { useState } from "react";
+import Footer from "./Componentes/Footer/Index";
 
 const FondoGradiente = styled.div`
   background: linear-gradient(175deg, #041833 4.16%, #04244F, 48%, #154580 96.76%);
@@ -89,6 +90,7 @@ const App = () => {
           </ContenidoGaleria>
         </MainContainer>
       </AppContainer>
+      <Footer/>
     </FondoGradiente>
   );
 };
