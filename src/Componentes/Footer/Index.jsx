@@ -38,7 +38,7 @@ const Footer = () => {
     return (
         <FooterEstilizado>
             <LogosRedes>
-                <img src="\public\Otros\facebook.png" alt="Logo Facebook" />
+                <img src="\Otros\facebook.png" alt="Logo Facebook" />
                 <img src="\public\Otros\twitter.png" alt="Logo Twitter" />
                 <img src="\public\Otros\instagram.png" alt="Logo Instagram" />
             </LogosRedes>
